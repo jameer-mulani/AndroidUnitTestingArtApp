@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HelloUnitTestingAndroid</string>
+    <string name="add_art">Add art</string>
+    <string name="art_image_lbl">Art Image</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_artist_name">Enter artist name</string>
+    <string name="year">Year</string>
+    <string name="save">Save</string>
+    <string name="search_image">Search image</string>
 </resources>

@@ -7,7 +7,7 @@ import com.jameermulani.hellounittestingandroid.R
 class TaxActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tax)
+        setContentView(R.layout.fragment_arts_list)
 
         val taxCalculator = TaxCalculator()
         val income = 100.0
