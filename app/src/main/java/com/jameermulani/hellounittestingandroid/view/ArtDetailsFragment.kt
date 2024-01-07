@@ -2,6 +2,7 @@ package com.jameermulani.hellounittestingandroid.view
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -19,7 +20,18 @@ class ArtDetailsFragment : BaseFragment(R.layout.fragment_art_details) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentArtDetailsBinding.bind(view)
         binding.btSave.setOnClickListener {
+            //todo
+        }
+        binding.ivArtDetail.setOnClickListener {
             findNavController().navigate(ArtDetailsFragmentDirections.actionArtDetailsFragmentToImageSearchFragment())
         }
+
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().popBackStack()
+            }
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(callback)
     }
 }
