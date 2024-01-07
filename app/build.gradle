@@ -44,10 +44,10 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     //Hilt
-    implementation 'com.google.dagger:hilt-android:2.28-alpha'
-    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
-    kapt 'com.google.dagger:hilt-android-compiler:2.28-alpha'
-    kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
+    implementation 'com.google.dagger:hilt-android:2.48'
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+    kapt 'com.google.dagger:hilt-android-compiler:2.48'
+    kapt 'androidx.hilt:hilt-compiler:1.1.0'
 
     //Retrofit
     def retrofitVersion = '2.9.0'
@@ -56,7 +56,7 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
 
     //Room
-    def room_version = '2.1.0-alpha01'
+    def room_version = '2.5.2'
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
     //for kotling ext & coroutine support in Room
