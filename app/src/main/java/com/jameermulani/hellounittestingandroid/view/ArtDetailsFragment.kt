@@ -9,20 +9,17 @@ import androidx.navigation.fragment.findNavController
 import com.jameermulani.hellounittestingandroid.R
 import com.jameermulani.hellounittestingandroid.databinding.FragmentArtDetailsBinding
 
-class ArtDetailsFragment : BaseFragment(R.layout.fragment_art_details) {
+class ArtDetailsFragment : Fragment(R.layout.fragment_art_details) {
 
-    private lateinit var binding: FragmentArtDetailsBinding
-    override fun getViewBinding(): ViewDataBinding? {
-        return binding
-    }
+    private var binding: FragmentArtDetailsBinding? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentArtDetailsBinding.bind(view)
-        binding.btSave.setOnClickListener {
+        binding?.btSave?.setOnClickListener {
             //todo
         }
-        binding.ivArtDetail.setOnClickListener {
+        binding?.ivArtDetail?.setOnClickListener {
             findNavController().navigate(ArtDetailsFragmentDirections.actionArtDetailsFragmentToImageSearchFragment())
         }
 
@@ -33,5 +30,10 @@ class ArtDetailsFragment : BaseFragment(R.layout.fragment_art_details) {
         }
 
         requireActivity().onBackPressedDispatcher.addCallback(callback)
+    }
+
+    override fun onDestroyView() {
+        binding = null
+        super.onDestroyView()
     }
 }

@@ -5,12 +5,13 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 
 abstract class BaseFragment(
-    @LayoutRes private val layoutId : Int) : Fragment(layoutId) {
-        abstract fun getViewBinding() : ViewDataBinding?
+    @LayoutRes private val layoutId: Int
+) : Fragment(layoutId) {
+    /*        abstract fun getViewBinding() : ViewDataBinding?
 
-    override fun onDestroyView() {
-        var viewBinding = getViewBinding()
-        viewBinding = null
-        super.onDestroyView()
-    }
+        override fun onDestroyView() {
+            var viewBinding = getViewBinding()
+            viewBinding = null
+            super.onDestroyView()
+        }*/
 }
