@@ -12,6 +12,6 @@ data class Art(
     var imageUrl : String,
 
     @PrimaryKey(autoGenerate = true)
-    val id : Int
+    var id : Int?= null
 
 )

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_art"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/art_image_lbl"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tv_art_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_art"
+            app:layout_constraintTop_toTopOf="@+id/iv_art"
+            tools:text="Monalisa" />
+
+        <TextView
+            android:id="@+id/tv_artist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            tools:text="Elavador Munch"
+            app:layout_constraintStart_toEndOf="@+id/iv_art"
+            app:layout_constraintTop_toBottomOf="@+id/tv_art_name" />
+
+        <TextView
+            android:id="@+id/tv_art_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_art"
+            app:layout_constraintTop_toBottomOf="@+id/tv_artist_name"
+            tools:text="1900" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
