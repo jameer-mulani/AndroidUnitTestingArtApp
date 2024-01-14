@@ -1,5 +1,6 @@
 package com.jameermulani.hellounittestingandroid.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -92,11 +93,16 @@ class ArtViewModel @Inject constructor(
         _insertArt.postValue(Resource.success(art))
     }
 
-    fun insertArt(art: Art) = viewModelScope.launch(Dispatchers.IO) {
+    private fun insertArt(art: Art) = viewModelScope.launch(Dispatchers.IO) {
         artLocalRepository.addArt(art)
     }
 
     fun setSelectedImage(url: String) {
         _selectedImageUrl.postValue(url)
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        Log.i("ArtAppViewModel", "onCleared: ArtViewModel")
     }
 }

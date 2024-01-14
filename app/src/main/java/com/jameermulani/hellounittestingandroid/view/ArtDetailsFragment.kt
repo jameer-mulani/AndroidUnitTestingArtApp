@@ -44,13 +44,13 @@ class ArtDetailsFragment @Inject constructor(private val glide: RequestManager) 
 
         subscribeToObservers()
 
-        val callback = object : OnBackPressedCallback(true) {
+        /*val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 findNavController().popBackStack()
             }
         }
 
-        requireActivity().onBackPressedDispatcher.addCallback(callback)
+        requireActivity().onBackPressedDispatcher.addCallback(callback)*/
     }
 
     private fun subscribeToObservers() {
